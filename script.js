@@ -15,3 +15,6 @@ function getHumanChoice(){
 
 let a = getComputerChoice(3);
 let b = getHumanChoice();
+
+let humanScore = 0;
+let computerScore = 0;
