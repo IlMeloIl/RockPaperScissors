@@ -12,8 +12,13 @@ function getComputerChoice(max){
 }
 
 function getHumanChoice(){
-    let humanChoice = prompt("Rock, Paper or Scissors?");
-    return humanChoice.toLowerCase();
+    while(true) {
+        let humanChoice = prompt("Rock, Paper or Scissors?");
+        humanChoice = humanChoice.toLowerCase();
+        if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors"){
+            return humanChoice;
+        }
+    }
 }
 
 function playGame(){
