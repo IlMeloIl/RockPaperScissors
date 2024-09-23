@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(max){
     let choice = Math.floor(Math.random()*max);
     if (choice === 0)
@@ -13,7 +16,9 @@ function getHumanChoice(){
     return humanChoice.toLowerCase();
 }
 
-function playRound(computerChoice, humanChoice){
+function playGame(){
+
+    function playRound(computerChoice, humanChoice){
     switch(humanChoice){
         case "rock":
             if (computerChoice === "paper"){
@@ -48,15 +53,16 @@ function playRound(computerChoice, humanChoice){
     }
 }
 
-const a = getComputerChoice(3);
-const b = getHumanChoice();
+    const a = getComputerChoice(3);
+    const b = getHumanChoice();
 
-let humanScore = 0;
-let computerScore = 0;
+    playRound(a, b);
 
-playRound(a, b);
+    console.log(`Computer choice: ${a}`);
+    console.log(`Your choice: ${b}`);
+    console.log(`Computer's score: ${computerScore}`);
+    console.log(`Your score: ${humanScore}`);
+}
 
-console.log(`Computer choice: ${a}`);
-console.log(`Your choice: ${b}`);
-console.log(`Computer's score: ${computerScore}`);
-console.log(`Your score: ${humanScore}`);
+for(let i = 0; i < 5; i++)
+    playGame();
