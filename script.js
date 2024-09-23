@@ -6,8 +6,12 @@ function getComputerChoice(max){
         return "paper"
     else
         return "scissors"
+}
 
+function getHumanChoice(){
+    let humanChoice = prompt("Rock, Paper or Scissors?");
+    return humanChoice.toLowerCase();
 }
 
 let a = getComputerChoice(3);
-console.log(a);
+let b = getHumanChoice();
