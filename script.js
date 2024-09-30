@@ -69,5 +69,4 @@ function playGame(){
     console.log(`Your score: ${humanScore}`);
 }
 
-for(let i = 0; i < 5; i++)
-    playGame();
+playGame();
