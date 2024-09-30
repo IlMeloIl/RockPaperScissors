@@ -69,4 +69,12 @@ function playGame(){
     console.log(`Your score: ${humanScore}`);
 }
 
-playGame();
+document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("click", function(e){
+        const choice = e.target.textContent;
+        console.log(choice);
+    });
+});
+
+
+//playGame();
